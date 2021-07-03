@@ -2,6 +2,7 @@
 using System.Linq;
 using System.IO;
 using System.Diagnostics;
+using System.Reflection;
 
 class MainClass
 {
@@ -11,7 +12,10 @@ class MainClass
         {
             Console.WriteLine("Welcome to the Hangman!\n");
 
-            string path = @"Hangman_console\Files\countries_and_capitals.txt";
+            //string path = @"..\Files\countries_and_capitals.txt";
+            //string path = @"Hangman_console\Files\countries_and_capitals.txt";
+            string path = AppDomain.CurrentDomain.BaseDirectory + "\\Files\\countries_and_capitals.txt";
+
             StreamWriter sw;
             StreamReader sr;
             string capitalWord = "";
